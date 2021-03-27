@@ -2,25 +2,27 @@ import React from 'react'
 // import { Button } from 'react-bootstrap';
 import './header.css'
 import {Link} from 'react-router-dom'
+import routes from "./Routes"
+
 
 export default function Header() {
     return (
        
         <nav >
             <ul className='nav-links'>
-                <Link to='/'>
+                <Link to={routes.default}>
                 <li><button>Home</button> </li>
                 
                 </Link>
-                <Link to='/cart'>
+                <Link to={routes.cart}>
                     <li><button>Cart</button></li>
                 
                 </Link>
                 
-                {/* <Link to='/'> */}
+                {/* <Link to={routes.about_us}>
                 <li><button>About Us</button> </li>
                 
-                {/* </Link> */}
+                </Link> */}
                 
             
             </ul>

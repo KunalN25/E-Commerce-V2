@@ -1,10 +1,20 @@
+
+
 nav {
-    display: flex;
-    justify-content: space-around;
+    /* display: block; */
+    /* justify-content: right; */
+    position: fixed;
+    top:0;  
     align-items: center;
-    min-height: 10vh;
-    margin-top:19px;
-    
+    width: 100%;
+    min-height: 12vh;
+    margin-top:0px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: rgb(147, 197, 47);
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+    /* border: solid red;     */
 }
 
 .nav-links {
@@ -13,5 +23,12 @@ nav {
     justify-content:space-around;
     align-items:center;
     list-style-type: none;
-
+    margin-top:19px; 
+     margin-right: 20px; 
+    /* border: solid red;     */
+    /* margin-right: 30px; */
+    float: right;
+}
+.nav-links li button {
+    z-index: 2;
 }

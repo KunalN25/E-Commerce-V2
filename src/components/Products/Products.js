@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
+// import {useCart} from './../Context/CartContext'
 import './product.css'
-// import { useCart } from './../Context/CartContext';
+import { useCart } from './../Context/CartContext';
 import ProductItem from './ProductItem';
+import {db} from '../../config/firebase'
 
 export default function Products() {
     
@@ -72,50 +74,70 @@ export default function Products() {
         },
         
         ])
-    const [arrange, setArrange]=useState([])
     //Arrange array contains the order in which products are arranged
+    const [arrange, setArrange]=useState([])
+
+    // function getCartElements() {
+    //     let items=[]
+    //     items=JSON.parse(localStorage.getItem("Cart"));
+    //     console.log("Cart from Products is " +items)
+
+    //     return items;   
+    // }
+    const [cart,setCart]=useState([])
+
+    const {COLLECTION_NAME, setCartValue}=useCart()
+
+    // const {cart}=useCart()
+    
 
     useEffect(()=> {
-        // const products=   
-    
+
+        // Arrange products
         const arrrange=[]
         for(let i=0;i<products.length;i+=3){
             arrrange.push(i)
         }
         setArrange(arrrange)
 
-
-        //Disable the cart productElements
-        // const productElements=document.getElementsByClassName("add-btn")
-
-        // if(cart)
-        //     cart.forEach((product)=> {
-        //         console.log(productElements[products.indexOf(product)])
-        //         productElements[products.indexOf(product)].disabled=true;
-             
+        const items=[]
+        // Get the data
+        // db.collection(COLLECTION_NAME).get().then((query)=>{
+        //     // const items=JSON.parse(localStorage.getItem('Cart'))
+        //     // setCart(items)
+        //     // Set the arrange array
+        //     query.forEach((doc)=>{//Loop through each document
+        //         // console.log('Doc data ', doc.data().product)
+        //         items.push(doc.data().product)
         //     })
-
-        // //console.log(productElements[3])
+        //     setCart(items)
+            
+           
+                 
+        // })
+        
+       
 
     },[products.length])
 
-    
-    //  console.log(arrange)
 
-    
+    // console.log('Product Rendered')
     
     return (
-        <div className='d-flex flex-column'>
+        <div className='product-container d-flex flex-column'>
                 
-
+            
             { arrange.map((element,eleidx)=> 
+            
                 <div key={eleidx} className='d-flex flex-row p-4'>
                     { products.slice(element,element+3).map((product,index)=>
                             
-                        <ProductItem key={product.id} 
+                        // <div className='card'>
+                            <ProductItem key={product.id} 
                                      product={product}
                                      index={element+index} 
                                      />
+                        // </div>
                     )}
                 
                 </div>

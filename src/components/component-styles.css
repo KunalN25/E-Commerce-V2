@@ -1,0 +1,16 @@
+.checkout-card, .success-card {
+    width:30%;
+    margin-left: 35%;
+    margin-top: 9%;
+
+}
+/* CHECKOUT */
+.checkout-card{
+
+}
+
+/* SUCCESS PAGE */
+.success-card {
+    background-color: rgb(141, 255, 146) !important;
+
+}
