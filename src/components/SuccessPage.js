@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './component-styles.css'
-
+import {useCart} from './Context/CartContext'
 function SuccessPage() {
     // Implement the other functionality like clearing cart and back straght to home
+    const {emptyCartProducts} = useCart()
+    useEffect(()=>{
+        // Empty cart after it is successful
+        emptyCartProducts()
+    },[])
     return (
         <div className='card success-card'>
             <div className='card-body'>

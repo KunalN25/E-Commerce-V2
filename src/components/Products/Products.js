@@ -4,6 +4,9 @@ import './product.css'
 import { useCart } from './../Context/CartContext';
 import ProductItem from './ProductItem';
 import {db} from '../../config/firebase'
+import routes from "../Routes"
+import {Link} from 'react-router-dom'
+
 
 export default function Products() {
     
@@ -14,63 +17,73 @@ export default function Products() {
             id:1000,
             name:'mobile',
             price:300,
-            imageURL:'https://www.online-tech-tips.com/wp-content/uploads/2019/12/electronic-gadgets.jpeg'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1001,
             name:'laptop',
             price:500,
-            imageURL:'https://www.online-tech-tips.com/wp-content/uploads/2019/12/electronic-gadgets.jpeg'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
 
         },
         {
             id:1002,
             name:'computer',
             price:750,
-            imageURL:'https://www.online-tech-tips.com/wp-content/uploads/2019/12/electronic-gadgets.jpeg'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1003,
             name:'headphone',
             price:175,
-            imageURL:'https://www.online-tech-tips.com/wp-content/uploads/2019/12/electronic-gadgets.jpeg'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1004,
             name:'headphone',
             price:23,
-            imageURL:'https://www.online-tech-tips.com/wp-content/uploads/2019/12/electronic-gadgets.jpeg'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1005,
             name:'mouse',
             price:300,
-            imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEo1obGlZQVj8kLLYnQxCN8RxIdpbYfI89Tw&usqp=CAU'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1006,
             name:'keyboard',
             price:500,
-            imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEo1obGlZQVj8kLLYnQxCN8RxIdpbYfI89Tw&usqp=CAU'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
 
         },
         {
             id:1007,
             name:'printer',
             price:750,
-            imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEo1obGlZQVj8kLLYnQxCN8RxIdpbYfI89Tw&usqp=CAU'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1008,
             name:'fax',
             price:175,
-            imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEo1obGlZQVj8kLLYnQxCN8RxIdpbYfI89Tw&usqp=CAU'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         {
             id:1009,
             name:'speaker',
             price:23,
-            imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEo1obGlZQVj8kLLYnQxCN8RxIdpbYfI89Tw&usqp=CAU'
+            imageURL: 'https://cdn1.vectorstock.com/i/1000x1000/75/50/pixel-computer-logo-icon-design-vector-22627550.jpg'
+
         },
         
         ])
@@ -126,7 +139,10 @@ export default function Products() {
     return (
         <div className='product-container d-flex flex-column'>
                 
+            <Link to={routes.cart}>
+                <button className='btn btn-info cart-btn' >Cart</button>
             
+            </Link>
             { arrange.map((element,eleidx)=> 
             
                 <div key={eleidx} className='d-flex flex-row p-4'>

@@ -6,6 +6,12 @@
     /* z-index: 1; */
     /* margin-right:0; */
 }
+.cart-btn {
+    float:right;
+    margin-right: 5%;
+    margin-top: 2%;
+    font-size: 20px;
+}
 .product-card{
     width: 30%;
     overflow: hidden;
@@ -25,8 +31,28 @@
 
 /* Cart Component */
 .empty-msg{
-    margin-top:4%;
+    margin-top:5%;
+    margin-left: 33%;
+    padding: 20px 0 16px 0;
+
 }
-.empty-btn {
+.empty-btn, .checkout-btn {
     margin-top: 3%;
+    margin-left: 10px;
+    float:right;
+}
+/* Increase and decrease buttons */
+.minus, .plus {
+    border-radius: 22%;
+    margin: 8px;
+    border: none;
+    background-color: lightseagreen;
+
+}
+
+.minus {
+    padding: 0 12px 0 12px;
+}
+.plus {
+    padding: 0 12px 0 12px;
 }

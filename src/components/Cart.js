@@ -72,7 +72,7 @@ export default function Cart() {
     function displayEmptyMessage() {
         
         if(cart_empty) {
-            return <div className='empty-msg'>The cart is empty</div>
+            return <div className='card product-card empty-msg'><h3>The cart is empty</h3></div>
         }
         
     }
@@ -87,7 +87,7 @@ export default function Cart() {
                         Empty Cart
                     </button>
                     <Link to={routes.checkout}>
-                        <button className='btn btn-success empty-btn'
+                        <button className='btn btn-success checkout-btn'
                                 onClick={checkout}>
                             Checkout
                         </button>

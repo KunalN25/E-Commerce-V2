@@ -11,13 +11,10 @@ export default function Header() {
         <nav >
             <ul className='nav-links'>
                 <Link to={routes.default}>
-                <li><button>Home</button> </li>
+                     <li><a class='nav-link'> Home</a> </li>
                 
                 </Link>
-                <Link to={routes.cart}>
-                    <li><button>Cart</button></li>
                 
-                </Link>
                 
                 {/* <Link to={routes.about_us}>
                 <li><button>About Us</button> </li>

@@ -1,16 +1,100 @@
 .checkout-card, .success-card {
-    width:30%;
+    width:40%;
     margin-left: 35%;
-    margin-top: 9%;
+    margin-top: 7%;
 
 }
 /* CHECKOUT */
 .checkout-card{
+    /* background-color: rgba(230, 250, 160, 0.986)  !important; */
+    /* padding:0; */
+    /* background-color:black; */
 
 }
+.checkout-card .card-text {
+    background-color: rgba(230, 250, 160, 0.986)  !important;
 
+}
+.product-list{
+    /* border: solid red; */
+    height: 400px;
+    overflow-y: scroll;
+    /* padding: 0; */
+}
+
+/* hr {
+    background-color: red;
+} */
+table {
+    margin-right: 13px;
+    /* border-collapse:separate; 
+    border-spacing: 0 1em; */
+}
+.product-list .prd-img{
+    width: 50%;
+    /* height: 9%; */
+    border-radius: 45%;
+    margin-left:     -94px;
+    /* padding: 0 0 12px 0; */
+}
+tr {
+    /* margin-top: 20px; */
+    /* padding: 23px 0 23px 0; */
+    /* border: 23px hidden ; */
+}
+td {
+    /* border:solid red; */
+    padding: 13px 0 13px 0;
+    
+}
+td:nth-child(2) {
+    /* padding-right: 23px; */
+    width: 30%;
+    font-size: 20px;
+}
+td:nth-child(3){
+    width: 30%;
+    /* border:solid red; */
+    /* border:solid red; */
+    /* padding-left: 93px; */
+    text-align: right;
+    white-space: nowrap;
+}
+
+.product-list span {
+
+}
+/* Product name */
+/* .product-list span:nth-child(2) {
+    margin: 0 0 0 43px;
+} */
+/* Product Qty */
+/* .product-list span:nth-child(3) {
+    margin-left: 33px;
+} */
+/* Product cost */
+/* .product-list span:nth-child(4) {
+    margin-left: 33px;
+
+} */
+.pay-btn {
+    margin-left: 12%;
+    margin-top: 1%;
+
+}
+.total {
+    font-weight: bold;
+    float: right;
+    font-size:20px;
+}
+
+.total span {
+    margin-left: 30px;
+    margin-right: 12px;
+}
 /* SUCCESS PAGE */
 .success-card {
     background-color: rgb(141, 255, 146) !important;
 
 }
+
