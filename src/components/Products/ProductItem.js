@@ -53,26 +53,26 @@ export default function ProductItem({  product,index }) {
             <img className="card-img-top" src={product.imageURL} alt={product.name}
                 ></img>
             <div className='card-body'>
-                <h5 className="card-title product-name">{product.name} </h5>
-                <div className='card-text'>Rs. {product.price}</div>
+                <h5 className="card-title product-name mb-1">{product.name} </h5>
+                <div className='card-text '>Rs. {product.price}</div>
              
         
-                {
-                    !added ? 
-                    <button id={product.id}
-                        className={`btn btn-primary add-btn  `}
+                    {
+                        !added ? 
+                        <button id={product.id}
+                            className={`btn btn-primary add-btn  `}
+                            onClick={()=> addProduct(product)}
+                            >
+                            Add+ 
+                        </button> 
+                        : 
+                        <button id={product.id}
+                        className={`btn btn-success  add-btn `}
                         onClick={()=> addProduct(product)}
                         >
-                        Add+ 
-                    </button> 
-                    : 
-                    <button id={product.id}
-                    className={`btn btn-success  add-btn `}
-                    onClick={()=> addProduct(product)}
-                    >
-                        Added to cart 
-                    </button>
-                }
+                            Added to cart 
+                        </button>
+                    }
                
              
             </div>
